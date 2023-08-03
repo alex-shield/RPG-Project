@@ -358,8 +358,13 @@
 "Assets/Scripts/Core/IAction.cs"
 "Assets/Scripts/Core/PersistentObjectSpawner.cs"
 "Assets/Scripts/Movement/Mover.cs"
+"Assets/Scripts/Saving/ISaveable.cs"
+"Assets/Scripts/Saving/SaveableEntity.cs"
+"Assets/Scripts/Saving/SavingSystem.cs"
+"Assets/Scripts/Saving/SerializableVector3.cs"
 "Assets/Scripts/SceneManagement/Fader.cs"
 "Assets/Scripts/SceneManagement/Portal.cs"
+"Assets/Scripts/SceneManagement/SavingWrapper.cs"
 -langversion:9.0
 
 /deterministic
