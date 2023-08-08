@@ -12,6 +12,7 @@ namespace RPG.Saving {
         // CACHED STATE
         static Dictionary<string, JsonSaveableEntity> globalLookup = new Dictionary<string, JsonSaveableEntity>();
 
+#if UNITY_EDITOR
         private void Update() {
             if (Application.IsPlaying(gameObject)) return;
             if (string.IsNullOrEmpty(gameObject.scene.path)) return;
@@ -26,6 +27,7 @@ namespace RPG.Saving {
 
             globalLookup[property.stringValue] = this;
         }
+#endif
 
         public string GetUniqueIdentifier() {
             return uniqueIdentifier;

@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.AI;
 using RPG.Combat;
 using RPG.Saving;
+using Newtonsoft.Json.Linq;
 
 namespace RPG.Core {
-    public class Health : MonoBehaviour, ISaveable {
+    public class Health : MonoBehaviour, IJsonSaveable {
 
         [SerializeField] float hitPoints = 100f;
         [SerializeField] bool isDead = false;
@@ -46,11 +47,11 @@ namespace RPG.Core {
             return isDead;
         }
 
-        public object CaptureState() {
-            return hitPoints;
+        public JToken CaptureAsJToken() {
+            return JToken.FromObject(hitPoints);
         }
 
-        public void RestoreState(object state) {
+        public void RestoreFromJToken(JToken state) {
             hitPoints = (float)state;
             if (hitPoints <= 0) {
                 Die();

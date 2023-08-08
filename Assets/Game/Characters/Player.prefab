@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 5823222124558034246, guid: b9cc3229cc9958c4193a2fd8215dfaa0, type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 7626165199148621185, guid: b9cc3229cc9958c4193a2fd8215dfaa0, type: 3}
       propertyPath: uniqueIdentifier
       value: player
